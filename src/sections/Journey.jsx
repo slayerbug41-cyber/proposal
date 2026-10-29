@@ -31,7 +31,7 @@ export default function Journey({ onNext }) {
     <ChapterTransition
       chapter="01"
       title="THE JOURNEY"
-      subtitle="যেভাবে শুরু হলো"
+      subtitle="How it all began"
       className="scene--journey"
       background={
         <motion.div

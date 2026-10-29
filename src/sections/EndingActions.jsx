@@ -11,7 +11,7 @@ export default function EndingActions({ message, onRestart, children }) {
       {children}
       {replyLinkOnEveryEnding && message && (
         <a className="text-btn" href={whatsappLink(whatsappNumber, message)} target="_blank" rel="noopener noreferrer">
-          <MessageCircle size={14} aria-hidden="true" /> চাইলে {myName}-কে জানিয়ে দিতে পারো (optional)
+          <MessageCircle size={14} aria-hidden="true" /> Let {myName} know, if you'd like (optional)
         </a>
       )}
       <button type="button" className="text-btn" onClick={onRestart}>

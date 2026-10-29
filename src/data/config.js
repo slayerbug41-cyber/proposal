@@ -17,42 +17,42 @@ export const proposalConfig = {
   whatsappNumber: WHATSAPP_NUMBER,
 
   title: "PROJECT HER",
-  subtitle: "একটা গল্প শুরু করার আগে…",
+  subtitle: "Every story starts somewhere…",
 
   // CHAPTER 00 — THE SECRET
   intro: {
-    teaser: "একটা secret বলব?",
+    teaser: "Can I tell you a secret?",
     lines: [
-      "তোমাকে একটা কথা বলার ছিল…",
-      "কিন্তু chat-এ লিখে বললে ব্যাপারটা boring হয়ে যায়।",
+      "There's something I've been meaning to tell you…",
+      "but a text message just didn't feel like enough.",
     ],
     button: "OPEN THE SECRET ✨",
   },
 
   // CHAPTER 01 — THE JOURNEY (exactly 3 lines; the last one is highlighted)
   journey: [
-    "তোমার সাথে কথা বলতে বলতে একটা অদ্ভুত ব্যাপার হয়েছে…",
-    "তুমি আমার দিনের একটা ছোট্ট অংশ থেকে…",
-    "আমার দিনের একটা সুন্দর অংশ হয়ে গেছো।",
+    "Somewhere between all our late-night conversations, something changed…",
+    "you went from being a small part of my day…",
+    "to the most beautiful part of it.",
   ],
 
   // CHAPTER 02 — OUR LITTLE MOMENTS (add or remove as many as you like)
   memories: [
     {
-      title: "প্রথম কথাগুলো",
-      text: "সেদিনের সেই সাধারণ conversation-টা এতটা মনে থাকবে ভাবিনি।",
+      title: "The first words",
+      text: "Such an ordinary conversation. I never imagined I'd still remember every word.",
     },
     {
-      title: "তোমার হাসি",
-      text: "তোমার একটা ছোট্ট হাসি কখন যে আমার favourite notification হয়ে গেল…",
+      title: "Your smile",
+      text: "Somewhere along the way, your smile became my favourite notification…",
     },
     {
-      title: "অকারণ অপেক্ষা",
-      text: "কখনও কখনও ফোনটা কোনো কারণ ছাড়াই check করি।",
+      title: "Waiting for nothing",
+      text: "Sometimes I check my phone for no reason at all. Okay — hoping it's you.",
     },
     {
-      title: "আর পাঁচ মিনিট",
-      text: "“আর পাঁচ মিনিট” বলে কতবার যে এক ঘণ্টা পার হয়ে গেছে, হিসেব নেই।",
+      title: "Just five more minutes",
+      text: "I've lost count of how many “five more minutes” quietly became an hour.",
     },
   ],
 
@@ -60,79 +60,79 @@ export const proposalConfig = {
   // Put your images in /public/images/. Missing images show a placeholder.
   photos: ["/images/photo1.jpg", "/images/photo2.jpg", "/images/photo3.jpg"],
   photoCaptions: [
-    "এই মুহূর্তটা মনে আছে?",
-    "কিছু দিন এমনিই সুন্দর হয়…",
-    "আর এটা? এটা আমার favourite 🙂",
+    "Remember this moment?",
+    "Some days are simply beautiful…",
+    "And this one? Secretly my favourite 🙂",
   ],
 
   // CHAPTER 04 — WHY YOU? (shown one at a time)
   reasons: [
-    "তুমি সুন্দর বলে শুধু তোমাকে ভালো লাগে না।",
-    "তোমার সাথে কথা বললে আমি নিজের মতো থাকতে পারি।",
-    "তোমার ছোট ছোট ব্যাপারগুলো আমার মনে থেকে যায়।",
+    "It isn't only that you're beautiful.",
+    "With you, I never have to pretend to be anyone else.",
+    "The little things you do stay with me long after.",
   ],
-  reasonsBridge: "আর সত্যি বলতে…",
-  reasonsFinal: "তোমাকে আরও জানতে ইচ্ছে করে। ❤️",
+  reasonsBridge: "And if I'm being honest…",
+  reasonsFinal: "I'd love to know you even more. ❤️",
 
   // CHAPTER 05 — MINI GAME (every answer gets a playful reaction, never "wrong")
   game: {
-    title: "একটা ছোট্ট test 😏",
-    question: "আমার সম্পর্কে একটা জিনিস guess করো…",
+    title: "A tiny test 😏",
+    question: "Take a guess — which one is true about me?",
     choices: [
-      "আমি রাতে বেশি active",
-      "আমি coding নিয়ে একটু বেশি obsessed",
-      "আমি তোমার message-এর reply আসলে secretly smile করি",
+      "I come alive after midnight",
+      "I'm a little too obsessed with code",
+      "I secretly smile every time you reply",
     ],
     reactions: [
-      "রাতের তারাগুলো এটা confirm-ও করবে না, deny-ও করবে না 🌙",
-      "এই website-টা দেখার পর এটা guess করা একটু সহজ ছিল, মানছি 😅",
-      "এটা আপাতত classified information… 🤫",
+      "The stars can neither confirm nor deny this 🌙",
+      "Fair — after this website, that one was a little too easy 😅",
+      "That's classified information… for now 🤫",
     ],
     response: "Hmm… interesting choice 👀",
-    later: "আচ্ছা, আসল answerটা পরে বলব।",
-    reveal: "তিনটেই 😌", // revealed only in the "Yes" ending
+    later: "I'll tell you the real answer… later.",
+    reveal: "All three 😌", // revealed only in the "Yes" ending
   },
 
   // CHAPTER 06 — THE QUESTION
   question: {
-    lead: ["আচ্ছা…", "এতক্ষণ তো আমি বললাম।", "এবার তোমার পালা।"],
-    ask: "তুমি কি আমার সাথে একটা গল্প শুরু করতে চাও?",
+    lead: ["So…", "I've done all the talking so far.", "Now it's your turn."],
+    ask: "Would you like to start a story with me?",
     promise: [
-      "আমি কোনো perfect relationship-এর promise করছি না।",
-      "শুধু honest থাকা, respect করা, আর একসাথে সুন্দর কিছু memories তৈরি করার চেষ্টা করব।",
+      "I can't promise you something perfect.",
+      "But I can promise honesty, respect, and a real effort to make beautiful memories together.",
     ],
-    yes: "হ্যাঁ",
-    maybe: "আমি একটু ভাবতে চাই",
-    no: "না — এবং সেটাও completely okay.",
+    yes: "Yes",
+    maybe: "Let me think about it",
+    no: "No — and that's completely okay.",
   },
 
   yes: {
     wow: "WAIT… SERIOUSLY? 😭❤️",
-    chapter: "তাহলে আজ থেকে একটা নতুন chapter শুরু হলো।",
-    remember: "আজকের তারিখটা মনে রাখলাম।",
-    date: "প্রথম official date-এর জন্য প্রস্তুত তো? ☕",
-    button: "একটা coffee date plan করি ☕",
-    whatsappMessage: "হ্যাঁ ❤️ PROJECT HER দেখলাম… তাহলে coffee date কবে? ☕",
+    chapter: "Then today, a brand-new chapter begins.",
+    remember: "I'm keeping today's date forever.",
+    date: "So… ready for our first official date? ☕",
+    button: "Let's plan a coffee date",
+    whatsappMessage: "Yes ❤️ I just watched PROJECT HER… so, when are you taking me for coffee? ☕",
   },
 
   maybe: {
     lines: [
-      "অবশ্যই।",
-      "তোমাকে কোনো তাড়াহুড়ো করে উত্তর দিতে হবে না।",
-      "তোমার honest answer-টাই আমার কাছে important।",
+      "Of course.",
+      "There's no rush, no pressure.",
+      "An honest answer means more to me than a quick one.",
       "Take your time. ❤️",
     ],
-    whatsappMessage: "PROJECT HER দেখলাম 🌙 একটু ভেবে তোমাকে জানাব।",
+    whatsappMessage: "I watched PROJECT HER 🌙 Give me a little time — I'll let you know.",
   },
 
   no: {
     lines: [
-      "ধন্যবাদ সত্যিটা বলার জন্য।",
-      "সব গল্প relationship হয়ে শেষ হয় না।",
-      "কিছু মানুষ আমাদের জীবনে আসে সুন্দর একটা chapter হয়ে।",
-      "তুমি ভালো থেকো। ❤️",
+      "Thank you for being honest with me.",
+      "Not every story is meant to become a love story.",
+      "Some people arrive in our lives as one beautiful chapter — and that's enough.",
+      "Be happy, always. ❤️",
     ],
-    whatsappMessage: "PROJECT HER দেখলাম। সুন্দর বানিয়েছ 🙂 তবে আমার উত্তরটা না।",
+    whatsappMessage: "I watched PROJECT HER. It's really beautiful 🙂 but my answer is no.",
   },
 
   // Shows a small, optional "let him know" WhatsApp link on the Maybe / No

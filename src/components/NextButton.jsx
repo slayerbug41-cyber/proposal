@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 import CinematicButton from "./CinematicButton";
 import { EASE } from "../lib/utils";
 
-export default function NextButton({ onClick, label = "পরের chapter", hint }) {
+export default function NextButton({ onClick, label = "Next chapter", hint }) {
   return (
     <motion.div
       className="next-wrap"

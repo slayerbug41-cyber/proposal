@@ -19,7 +19,7 @@ export default function ProgressIndicator({ visible, chapter, total = 7, onBack 
           <div
             className="hud__progress"
             role="progressbar"
-            aria-label="গল্পের progress"
+            aria-label="Story progress"
             aria-valuemin={0}
             aria-valuemax={total - 1}
             aria-valuenow={chapter}
@@ -27,7 +27,7 @@ export default function ProgressIndicator({ visible, chapter, total = 7, onBack 
             <motion.span className="hud__bar" initial={false} animate={{ scaleX: (chapter + 1) / total }} transition={{ duration: 1.2, ease: EASE }} />
           </div>
           <div className="hud__row">
-            <button type="button" className="icon-btn" onClick={onBack} aria-label="আগের chapter-এ ফিরে যাও">
+            <button type="button" className="icon-btn" onClick={onBack} aria-label="Go back to the previous chapter">
               <ChevronLeft size={20} aria-hidden="true" />
             </button>
             <p className="hud__label">

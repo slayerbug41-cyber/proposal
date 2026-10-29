@@ -77,29 +77,59 @@ function Scene({ scene, go, restart }) {
   }
 }
 
+// Each scene is a browser-history entry, so the phone's back gesture steps back
+// through the story instead of leaving it, and a reload resumes the same scene.
+const savedScene = () => {
+  try {
+    const s = window.history.state?.scene;
+    return s in STARS ? s : "intro";
+  } catch {
+    return "intro";
+  }
+};
+
+const remember = (scene, replace = false) => {
+  try {
+    window.history[replace ? "replaceState" : "pushState"]({ scene }, "");
+  } catch {
+    /* history unavailable (sandboxed iframe) — the story still works */
+  }
+};
+
 export default function App() {
   const [ready, setReady] = useState(false);
-  const [scene, setScene] = useState("intro");
+  const [scene, setScene] = useState(savedScene);
   const [run, setRun] = useState(0);
 
   useEffect(() => startPointerTracking(), []);
+
+  useEffect(() => {
+    remember(savedScene(), true);
+    const onPop = (e) => setScene(e.state?.scene in STARS ? e.state.scene : "intro");
+    window.addEventListener("popstate", onPop);
+    return () => window.removeEventListener("popstate", onPop);
+  }, []);
 
   useEffect(() => {
     if (ready) setStars(STARS[scene]);
     document.documentElement.dataset.scene = scene;
   }, [scene, run, ready]);
 
-  const go = useCallback((next) => setScene(next), []);
+  const go = useCallback((next) => {
+    setScene(next);
+    remember(next);
+  }, []);
   const restart = useCallback(() => {
     setRun((r) => r + 1);
     setScene("intro");
+    remember("intro");
   }, []);
   const onLoaded = useCallback(() => setReady(true), []);
 
   const chapter = FLOW.indexOf(scene);
   const back = useCallback(() => {
-    if (chapter > 0) setScene(FLOW[chapter - 1]);
-  }, [chapter]);
+    if (chapter > 0) go(FLOW[chapter - 1]);
+  }, [chapter, go]);
 
   return (
     <SoundProvider>

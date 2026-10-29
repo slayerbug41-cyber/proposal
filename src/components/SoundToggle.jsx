@@ -9,7 +9,7 @@ export default function SoundToggle() {
       className={`icon-btn sound-toggle ${enabled ? "is-on" : ""}`}
       onClick={toggle}
       aria-pressed={enabled}
-      aria-label={enabled ? "Sound বন্ধ করো" : "Sound চালু করো"}
+      aria-label={enabled ? "Turn sound off" : "Turn sound on"}
     >
       {enabled ? <Volume2 size={18} aria-hidden="true" /> : <VolumeX size={18} aria-hidden="true" />}
       {enabled && (

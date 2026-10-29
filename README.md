@@ -1,10 +1,10 @@
 # PROJECT HER ❤️
 
-> একটা গল্প শুরু করার আগে…
+> Every story starts somewhere…
 
 A short interactive "film" built for one person: seven chapters, a question, and three endings. Every ending treats her answer with respect.
 
-**Stack:** React + Vite + Framer Motion + Lucide icons. Fonts are self-hosted, so the site makes no third-party requests. There is no backend, no tracking, no cookies and no analytics.
+**Stack:** React + Vite + Framer Motion + Lucide icons. Fonts (Playfair Display, Inter and Caveat, Latin subsets only) are self-hosted, so the site makes no third-party requests. There is no backend, no tracking, no cookies and no analytics.
 
 ---
 
@@ -144,6 +144,7 @@ proposal/
 
 - **Timing:** each scene describes its pauses as an array of milliseconds (`useSequence`). To change how long a line stays on screen, edit the `TIMELINE` at the top of that section file. Tapping the screen skips ahead on timed steps.
 - **Performance:** the stars, rain and celebration are each drawn on a single `<canvas>` with `requestAnimationFrame`. Parallax is driven by CSS variables. None of these cause React re-renders.
+- **Navigation:** every scene is a browser-history entry, so the phone's back gesture steps back one chapter instead of closing the site, and a refresh resumes where she left off. On timed scenes, a tap anywhere (or Space / Enter / →) skips ahead.
 - **Accessibility:** everything works with the keyboard and has visible focus rings and screen-reader text. With `prefers-reduced-motion` turned on, warp, parallax, grain and the particle bursts are switched off.
 - **Respect, by design:** all three answers are always visible, readable and full-size buttons. Nothing moves away from her finger, there are no timers, nothing is pre-selected and nobody asks "are you sure?".
 
