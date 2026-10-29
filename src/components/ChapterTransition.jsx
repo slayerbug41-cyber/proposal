@@ -37,7 +37,7 @@ export default function ChapterTransition({ chapter, title, subtitle, background
             key="card"
             className="chapter-card"
             onClick={() => setReady(true)}
-            aria-label={`Chapter ${chapter}: ${title}. শুরু করতে tap করো`}
+            aria-label={`Chapter ${chapter}: ${title}. Tap to begin`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0, scale: 1.04, filter: "blur(10px)", transition: { duration: 0.6 } }}

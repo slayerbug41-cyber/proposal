@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { useReducedMotion } from "framer-motion";
 import { graphemes } from "../lib/utils";
 
-/** Types text one Bengali-safe character at a time, with a glowing cursor. */
+/** Types text one grapheme-safe character at a time, with a glowing cursor. */
 export default function Typewriter({ text, speed = 55, startDelay = 700, onDone, className = "", keepCursor = false }) {
   const reduce = useReducedMotion();
   const parts = useMemo(() => graphemes(text), [text]);
@@ -26,7 +26,7 @@ export default function Typewriter({ text, speed = 55, startDelay = 700, onDone,
         return;
       }
       const ch = parts[i - 1];
-      const delay = /[…।?!,]/.test(ch) ? speed * 7 : ch === " " ? speed * 1.3 : speed * (0.65 + Math.random() * 0.7);
+      const delay = /[….?!,]/.test(ch) ? speed * 7 : ch === " " ? speed * 1.3 : speed * (0.65 + Math.random() * 0.7);
       timer = setTimeout(typeNext, delay);
     };
     timer = setTimeout(typeNext, startDelay);

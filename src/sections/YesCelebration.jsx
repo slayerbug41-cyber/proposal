@@ -24,7 +24,7 @@ function useToday() {
   return useMemo(() => {
     const d = new Date();
     try {
-      return d.toLocaleDateString("bn-BD", { weekday: "long", day: "numeric", month: "long", year: "numeric" });
+      return d.toLocaleDateString("en-US", { weekday: "long", day: "numeric", month: "long", year: "numeric" });
     } catch {
       return d.toDateString();
     }

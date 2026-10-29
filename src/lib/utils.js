@@ -23,11 +23,11 @@ export const mq = (query) =>
   typeof window !== "undefined" && !!window.matchMedia && window.matchMedia(query).matches;
 
 let segmenter;
-// Splits text into user-perceived characters so Bengali glyphs type in whole pieces.
+// Splits text into user-perceived characters so emoji and accents type in whole pieces.
 export function graphemes(text) {
   try {
     if (typeof Intl !== "undefined" && Intl.Segmenter) {
-      segmenter ||= new Intl.Segmenter("bn", { granularity: "grapheme" });
+      segmenter ||= new Intl.Segmenter("en", { granularity: "grapheme" });
       return Array.from(segmenter.segment(text), (s) => s.segment);
     }
   } catch {

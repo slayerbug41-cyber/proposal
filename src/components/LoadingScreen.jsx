@@ -89,7 +89,7 @@ export default function LoadingScreen({ onDone }) {
         <motion.span initial={{ scaleX: 0 }} animate={{ scaleX: progress }} transition={{ duration: 0.9, ease: EASE }} />
       </div>
       <motion.p className="loading__hint" initial={{ opacity: 0 }} animate={{ opacity: 0.75 }} transition={{ delay: 1.8, duration: 1 }}>
-        🎧 চাইলে উপরের ডান কোণ থেকে sound চালু করে নিও
+        🎧 Best with sound on: tap the speaker in the top-right corner
       </motion.p>
     </motion.div>
   );

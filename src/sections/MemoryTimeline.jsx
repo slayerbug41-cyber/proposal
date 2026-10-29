@@ -51,9 +51,9 @@ function MomentsContent({ onNext }) {
     <div className="scene__content moments">
       <header className="section-head">
         <p className="eyebrow">MEMORIES · {pad2(memories.length)}</p>
-        <RevealText as="h2" className="section-title" text="কিছু মুহূর্ত, যেগুলো এমনিই থেকে গেছে" />
+        <RevealText as="h2" className="section-title" text="The little moments that quietly stayed" />
         <motion.p className="section-hint" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.2 }}>
-          একটা একটা করে ছুঁয়ে দেখো ✨
+          Tap each one to light it up ✨
         </motion.p>
       </header>
       <ol className="constellation">
@@ -62,7 +62,7 @@ function MomentsContent({ onNext }) {
         ))}
       </ol>
       <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 1 }}>
-        <NextButton onClick={onNext} hint={lit.size === memories.length ? "সবগুলো তারা জ্বলে উঠেছে ✨" : "আরও অনেক মুহূর্ত বাকি… হয়তো।"} />
+        <NextButton onClick={onNext} hint={lit.size === memories.length ? "Every star is shining now ✨" : "So many more moments to come… maybe."} />
       </motion.div>
     </div>
   );
@@ -70,7 +70,7 @@ function MomentsContent({ onNext }) {
 
 export default function MemoryTimeline({ onNext }) {
   return (
-    <ChapterTransition chapter="02" title="OUR LITTLE MOMENTS" subtitle="ছোট ছোট মুহূর্ত">
+    <ChapterTransition chapter="02" title="OUR LITTLE MOMENTS" subtitle="The little moments">
       <MomentsContent onNext={onNext} />
     </ChapterTransition>
   );

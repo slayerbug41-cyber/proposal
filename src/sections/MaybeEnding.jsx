@@ -30,7 +30,7 @@ export default function MaybeEnding({ onRestart, onRevisit }) {
           {step > lines.length && (
             <EndingActions message={whatsappMessage} onRestart={onRestart}>
               <CinematicButton variant="glass" onClick={onRevisit}>
-                উত্তর ready হলে, প্রশ্নটায় ফিরে যাও
+                When you're ready, go back to the question
               </CinematicButton>
             </EndingActions>
           )}

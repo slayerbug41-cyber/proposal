@@ -79,7 +79,7 @@ function ReasonsContent({ onNext }) {
 
 export default function ReasonsSection({ onNext }) {
   return (
-    <ChapterTransition chapter="04" title="WHY YOU?" subtitle="কেন তুমি?">
+    <ChapterTransition chapter="04" title="WHY YOU?" subtitle="Why you?">
       <ReasonsContent onNext={onNext} />
     </ChapterTransition>
   );

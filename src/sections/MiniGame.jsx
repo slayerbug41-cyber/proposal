@@ -46,7 +46,7 @@ function GameContent({ onNext }) {
             <p className="eyebrow">A TINY TEST</p>
             <h2 className="game__title">{game.title}</h2>
             <p className="game__question">{game.question}</p>
-            <div className="game__choices" role="group" aria-label="একটা উত্তর বেছে নাও">
+            <div className="game__choices" role="group" aria-label="Pick an answer">
               {game.choices.map((c, i) => (
                 <motion.button
                   type="button"
@@ -88,7 +88,7 @@ function GameContent({ onNext }) {
         {phase === "react" && (
           <motion.div key="react" className="game__react" {...fade} aria-live="polite">
             <p className="game__picked">
-              তোমার answer: <span>{game.choices[choice]}</span>
+              Your answer: <span>{game.choices[choice]}</span>
             </p>
             <RevealText as="h2" className="game__response" text={game.response} />
             {game.reactions?.[choice] && (
@@ -101,7 +101,7 @@ function GameContent({ onNext }) {
               <motion.div className="next-wrap" initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: EASE }}>
                 <p className="next-hint">FINAL SCENE</p>
                 <CinematicButton variant="glass" onClick={onNext}>
-                  শেষ দৃশ্যে চলো
+                  On to the final scene
                   <ArrowRight size={18} aria-hidden="true" />
                 </CinematicButton>
               </motion.div>
@@ -115,7 +115,7 @@ function GameContent({ onNext }) {
 
 export default function MiniGame({ onNext }) {
   return (
-    <ChapterTransition chapter="05" title="A TINY TEST" subtitle="একটু খেলা যাক?">
+    <ChapterTransition chapter="05" title="A TINY TEST" subtitle="Shall we play a little?">
       <GameContent onNext={onNext} />
     </ChapterTransition>
   );

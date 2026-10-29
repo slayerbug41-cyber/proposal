@@ -48,7 +48,7 @@ function Polaroid({ photo, index, focused, onToggle }) {
       >
         <div className="polaroid-float" style={{ animationDelay: `${index * -2.1}s` }}>
           <TiltCard className="polaroid" role="button" tabIndex={0} aria-pressed={focused} aria-label={photo.caption || `Photo ${index + 1}`} onClick={onToggle} onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && (e.preventDefault(), onToggle())}>
-            <Photo src={photo.src} alt={photo.caption || `আমাদের মুহূর্ত ${index + 1}`} index={index} />
+            <Photo src={photo.src} alt={photo.caption || `Our moment ${index + 1}`} index={index} />
             <p className="polaroid__caption">{photo.caption}</p>
             <span className="polaroid__frame" aria-hidden="true">
               FRAME {pad2(index + 1)}
@@ -69,9 +69,9 @@ function GalleryContent({ onNext }) {
     <div className="scene__content gallery-scene">
       <header className="section-head">
         <p className="eyebrow">MEMORY GALLERY</p>
-        <RevealText as="h2" className="section-title" text="কিছু ফ্রেম, কিছু মুহূর্ত" />
+        <RevealText as="h2" className="section-title" text="A few frames, a few moments" />
         <motion.p className="section-hint" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1 }}>
-          ছবিগুলো ছুঁয়ে দেখো, একটু নড়েচড়ে উঠবে 📸
+          Tap a photo — it comes to life 📸
         </motion.p>
       </header>
       <div className="gallery">
@@ -86,7 +86,7 @@ function GalleryContent({ onNext }) {
 
 export default function PhotoGallery({ onNext }) {
   return (
-    <ChapterTransition chapter="03" title="MEMORY GALLERY" subtitle="কিছু ফ্রেম, কিছু মুহূর্ত">
+    <ChapterTransition chapter="03" title="MEMORY GALLERY" subtitle="A few frames, a few moments">
       <GalleryContent onNext={onNext} />
     </ChapterTransition>
   );

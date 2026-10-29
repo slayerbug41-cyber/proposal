@@ -103,7 +103,7 @@ export default function ProposalQuestion({ onAnswer }) {
             <motion.div
               className="question__choices"
               role="group"
-              aria-label="তোমার উত্তর"
+              aria-label="Your answer"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.1, ease: EASE }}
@@ -119,7 +119,7 @@ export default function ProposalQuestion({ onAnswer }) {
               <button type="button" className="choice-no" onClick={() => answer("no")} disabled={!!chosen}>
                 {q.no}
               </button>
-              <p className="question__note">যেটাই বেছে নাও, সেটাই ঠিক উত্তর।</p>
+              <p className="question__note">Whatever you choose is the right answer.</p>
             </motion.div>
           )}
         </div>
